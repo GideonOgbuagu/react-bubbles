@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-//import axios from "axios";
-import {axiosWithAuth} from '../utils/axiosWithAuth';
+import axios from "axios";
+import { axiosWithAuth } from '../utils/axiosWithAuth';
 
 import Bubbles from "./Bubbles";
 import ColorList from "./ColorList";
@@ -13,7 +13,7 @@ const BubblePage = () => {
   useEffect(() => {
     const getBubblesData = () => {
       axiosWithAuth()
-        .get("/api/colors")
+        .get('/api/colors')
         .then(res => {
           console.log(res)
           setColorList(res.data)
