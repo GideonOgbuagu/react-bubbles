@@ -102,12 +102,13 @@ form {
 .login-cont {
   width: 100%;
   text-align: center;
+  margin-top: 50px;
   .login-header {
       text-align: center;
   }
   .form-cont {
       width: 60%;
-      // margin: 0 auto;
+      margin: 0 auto;
       display: flex;
       flex-direction: column;
       align-items: center;

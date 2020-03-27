@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 
-const Login = () => {
+const Login = (props) => {
   const [state, setState] = useState({
     username: '',
     password: ''
@@ -23,6 +23,7 @@ const Login = () => {
         .then(res => {
           console.log("FROM LOGIN!!!", res)
           localStorage.setItem('token', JSON.stringify(res.data.payload))
+          props.history.push("/bubble-page")
         })
         .catch(err => {
           console.log("THROWING ERROR FROM LOGIN: ", err)
