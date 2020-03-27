@@ -21,7 +21,7 @@ const Login = (props) => {
    axiosWithAuth()
         .post("/api/login", state)
         .then(res => {
-          console.log("FROM LOGIN!!!", res)
+          //console.log("FROM LOGIN!!!", res)
           localStorage.setItem('token', JSON.stringify(res.data.payload))
           props.history.push("/bubble-page")
         })
